@@ -17,6 +17,7 @@
 }
 .pic_box{
     position: absolute;
+    bottom:10%;
     left:20%;
     right:20%;
     width:60%;
