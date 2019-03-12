@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet"><!-連結style.css>
+    <title>Lay's</title>
+</head>
+    <script>
+     var pic_num=1;
+    var tmp;
+    function right(){
+    if(pic_num==3){
+        pic_num=1;
+    }    
+    else if(pic_num!=3){
+    pic_num=pic_num+1;
+    } 
+    document.getElementById("image").src='%E6%B4%8B%E8%8A%8B'+pic_num+'.png';
+    }
+        
+    function left(){
+    if(pic_num==1){
+        pic_num=3;
+    }    
+    else if(pic_num!=1){
+    pic_num=pic_num-1;
+    }       
+    document.getElementById("image").src='%E6%B4%8B%E8%8A%8B'+pic_num+'.png';
+    }
+     
+    function change(){
+            tmp=setInterval(right,1500);
+    }
+    </script>>
+<body onload="change()">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.js"></script>
+    
+    
+    <img id="image" class="pic" src="%E6%B4%8B%E8%8A%8B1.png" >
+    
+    <div class="pic" >
+    <img src="%E5%96%AE%E6%8C%89%E9%8D%B5-%20%E5%B7%A6.png" alt="Loading Error"  id="left_but">
+    <img src="%E5%96%AE%E6%8C%89%E9%8D%B5-%20%E5%8F%B3.png" alt="Loading Error" id="right_but">
+    <img src="learn%20more_.png" alt="Loading Error" id="mid_but">
+    </div>
+    
+    <script>
+   
+$('#left_but').click(left);
+        
+$('#right_but').click(right);
+                      
+    </script>  
+</body>
+</html>
